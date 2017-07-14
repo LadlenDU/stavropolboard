@@ -1,0 +1,124 @@
+AddDefaultCharset UTF-8
+Options -Indexes
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE image/x-icon
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch Konqueror no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+Header append Vary User-Agent
+</IfModule>
+
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.stavropolboard\.ru$ [NC]
+RewriteRule ^(.*)$ https://stavropolboard.ru/$1 [R=301,L]
+</IfModule>
+
+ErrorDocument 404 https://stavropolboard.ru/404.php
+#php_flag register_globals off
+#php_flag magic_quotes_gpc off
+#php_flag magic_quotes_runtime off
+#php_flag display_errors off
+#php_value display_errors 1
+#php_value error_reporting 2047
+
+RewriteEngine on
+RewriteBase /
+
+RewriteRule code.gif core/antirobot.php
+RewriteRule flymail-([0-9]+).png core/flymail.php?id_mess=$1
+RewriteRule ^login.html$ index.php?op=account&act=login
+RewriteRule ^logout.html$ index.php?op=account&act=logout
+RewriteRule ^register.html$ index.php?op=account&act=register
+RewriteRule ^newpass.html$ index.php?op=account&act=newpass
+RewriteRule ^accept,([0-9]+),([-a-zA-Z0-9_=]+)$ index.php?op=account&act=newpass&accept=yes&usid=$1&hash=$2
+RewriteRule ^accept_rules.html$ index.php?op=cpanel&act=accept_rules
+RewriteRule ^profile.html$ index.php?op=cpanel&act=profile
+RewriteRule ^cpanel.html$ index.php?op=cpanel
+RewriteRule ^cpanel-p([0-9]+).html$ index.php?op=cpanel&page=$1
+RewriteRule ^cpanel-([0-9]+)-edit.html$ index.php?op=cpanel&group=edit&id_mess=$1
+RewriteRule ^cpanel-([0-9]+)-del.html$ index.php?op=cpanel&group=del&id_mess=$1
+RewriteRule ^cpanel-([0-9]+)-prolongation.html$ index.php?op=cpanel&group=prolongation&id_mess=$1
+RewriteRule ^cpanel-del.html$ index.php?op=cpanel&group=del
+RewriteRule ^goto-([0-9]+).html$ core/redirect.php?id=$1
+RewriteRule ^ru.html$ core/changelang.php?l=ru
+RewriteRule ^en.html$ core/changelang.php?l=en
+RewriteRule ^city.html$ core/changecity.php
+RewriteRule ^newlist.html$ index.php?op=newlist
+RewriteRule ^newlist-p([0-9]+).html$ index.php?op=newlist&page=$1
+RewriteRule ^c([0-9]+).html$ index.php?id_cat=$1
+RewriteRule ^c([0-9]+)-p([0-9]+).html$ index.php?id_cat=$1&page=$2
+RewriteRule ^c([0-9]+)-([0-9]+).html$ index.php?id_cat=$1&id_mess=$2
+RewriteRule ^new.html$ index.php?op=add
+RewriteRule ^([0-9]+)-new.html$ index.php?op=add&cat=$1
+RewriteRule ^print([0-9]+)-([0-9]+).html$ index.php?op=print&id_cat=$1&id_mess=$2
+RewriteRule ^vip([0-9]+).html$ index.php?op=vip&id_mess=$1 [QSA,L]
+RewriteRule ^note.html$ index.php?op=note
+RewriteRule ^note-p([0-9]+).html$ index.php?op=note&page=$1
+RewriteRule ^noteprint.html$ index.php?op=noteprint
+RewriteRule ^informers.html$ index.php?op=informers
+RewriteRule ^rss.html$ index.php?op=rss_export
+RewriteRule ^search.html$ index.php?op=search
+RewriteRule ^contacts.html$ index.php?op=contacts
+RewriteRule ^news.html$ index.php?op=news
+RewriteRule ^news-p([0-9]+).html$ index.php?op=news&page=$1
+RewriteRule ^n([0-9]+)-([-a-zA-Z0-9_]+).html$ index.php?op=news&id=$1&title=$2
+RewriteRule ^addnews.html$ index.php?op=addnews
+RewriteRule ^p([0-9]+).html$ index.php?op=content&id=$1
+RewriteRule ^success.html$ a/pay.php?action=success
+RewriteRule ^fail.html$ a/pay.php?action=fail
+RewriteRule ^pages/([0-9]+)/?$ p$1.html
+RewriteRule ^advertisement/nesting/([0-9]+)/kind/([0-9]+)/?$ c$1-$2.html
+RewriteRule ^rss/?$ rss.html
+RewriteRule ^contacts/?$ contacts.html
+RewriteRule ^search/?$ search.html
+
+# сжатие text, html, javascript, css, xml:
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+ 
+# кеш браузера
+<ifModule mod_expires.c>
+ExpiresActive On
+
+#по умолчанию кеш в 5 секунд
+ExpiresDefault "access plus 1 days"
+
+# Включаем кэширование изображений и флэш на месяц
+ExpiresByType image/x-icon "access plus 1 month"
+ExpiresByType image/jpeg "access plus 4 weeks"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType image/gif "access plus 43829 minutes"
+ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+
+# Включаем кэширование css, javascript и текстовых файлоф на одну неделю
+ExpiresByType text/css "access plus 604800 seconds"
+ExpiresByType text/javascript "access plus 604800 seconds"
+ExpiresByType application/javascript "access plus 604800 seconds"
+ExpiresByType application/x-javascript "access plus 604800 seconds"
+
+# Включаем кэширование html и htm файлов на один день
+ExpiresByType text/html "access plus 43200 seconds"
+
+# Включаем кэширование xml файлов на десять минут
+ExpiresByType application/xhtml+xml "access plus 600 seconds"
+
+# Нестандартные шрифты сайта 
+ExpiresByType application/x-font-ttf "access plus 1 month"
+ExpiresByType font/opentype "access plus 1 month"
+ExpiresByType application/x-font-woff "access plus 1 month"
+ExpiresByType image/svg+xml "access plus 1 month"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+</ifModule>

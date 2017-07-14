@@ -1,0 +1,10 @@
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 31449600 seconds"
+</IfModule>
+<IfModule mod_headers.c>
+<FilesMatch "\.(ico|jpe?g|png|gif|css|js)$">
+Header set Cache-Control "max-age=31449600, public"
+</FilesMatch>
+</IfModule>
+#php_flag engine off

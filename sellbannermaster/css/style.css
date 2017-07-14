@@ -1,0 +1,391 @@
+body {
+	background-color: #dfdede;
+	color:#333;
+	font-family: Arial, Tahoma;
+}
+a {
+	color: #333333;
+}
+
+.tooltip span {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	top: -30px;
+	right: -330px;
+	width: 300px;
+	padding: 10px;
+	border: 1px solid #afaaa0;
+	background-color: #fffaf0;
+	border-radius: 8px;
+	box-shadow: 5px 5px 8px #cccccc;
+}
+
+.tooltip {
+	position: relative;
+	border-bottom: 1px dashed #333;
+	cursor: help;
+}
+
+.tooltip:hover span {
+	display: block;
+}
+
+.file_upload_div {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	background: url(../images/upload.png) 0 0 no-repeat;
+}
+
+.file_upload_div input {
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 20px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#login_form {
+	display: block;
+	width: 600px;
+	height: 370px;
+	margin: 100px auto;
+	background-color: #ffffff;
+	box-shadow:1px 5px 8px #b6b5b5;
+}
+#stat {
+	display: block;
+	width: 1100px;
+	margin: 50px auto 20px auto;
+	background-color: #ffffff;
+	box-shadow:1px 5px 8px #b6b5b5;
+}
+#conteiner {
+	padding: 0px 20px 20px 20px;
+}
+#top_title {
+	display: block;
+	height: 70px;
+	line-height: 70px;
+	background-color: #444444;
+	color: #FFFFE1;
+	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
+}
+#top_actions {
+	display: block;
+	margin: 20px 0px 0px 0px;
+	background-color: #ffffff;
+	text-align: right;
+}
+
+#information {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 20px 0px -30px 0px;
+	color: #00aa00;
+}
+
+#stat td {
+	padding: 0px 10px 0px 10px;
+	text-align: center;
+}
+
+#param td {
+	padding: 5px 10px 5px 10px;
+	height: 25px;
+	text-align: left;
+}
+
+#param th {
+	padding: 5px 10px 5px 10px;
+	height: 25px;
+	text-align: center;
+}
+
+#banner td {
+	padding: 5px 10px 5px 10px;
+	height: 25px;
+	text-align: center;
+}
+
+#banner th {
+	padding: 5px 10px 5px 10px;
+	height: 25px;
+	text-align: center;
+}
+
+#banners th {
+	padding: 5px 5px 5px 5px;
+	height: 25px;
+	text-align: center;
+}
+
+#banners td {
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+}
+
+#stat input[type=image] {
+	padding: 3px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	margin: 10px 0px 0px 0px;
+}
+
+#stat div i {
+	font-size: 18px;
+	font-weight: bold;
+	color: #33aa33;
+}
+
+#stat input[type=submit] {
+	margin: 0px 0px 0px 0px;
+	width: 300px;
+	padding: 15px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff;
+	border: none;
+	background-color: #f5aa00;
+	cursor:pointer;
+	border-radius:5px;
+}
+
+#stat input[type=submit]:hover {
+	background-color: #f59000;
+}
+
+.gateways input[type=button] {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff;
+	border: none;
+	background-color: #f5aa00;
+	cursor:pointer;
+	border-radius:5px;
+}
+
+.gateways input[type=button]:hover {
+	background:#f59000;
+}
+
+.gateways input {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	border: none;
+	background-color: #edecec;
+	margin: 0px 10px 0px 0px;
+	width: 100px;
+}
+
+.gateways select {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	border: none;
+	background-color: #edecec;
+	margin: 0px 10px 0px 0px;
+	width: 200px;
+}
+
+.gateways {
+	text-align: center;
+}
+
+.gateways a {
+	display: none;
+}
+
+.gateways table {
+	border: none !important;
+}
+
+#login_form div {
+	display: block;
+	width: 600px;
+	height: 70px;
+	margin: 0px 0px 50px 0px;
+	background-color: #005594;
+}
+#login_form span {
+	float: left;
+	width: 100px;
+	margin: 10px 0px 0px 60px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+}
+#login_form input[type=text], #login_form input[type=password] {
+	width: 300px;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	border: 1px solid #999;
+	background-color: #edecec;
+	margin: 0px 0px 5px 0px;
+}
+#login_form input[type=submit] {
+	float: left;
+	margin: 5px 0px 0px 160px;
+	width: 300px;
+	padding: 15px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff;
+	border: none;
+	background-color: #f5aa00;
+	cursor:pointer;
+	border-radius:5px;
+}
+
+#login_form input[type=submit]:hover {
+	background-color: #f59000;
+}
+.row_0 {
+	background-color: #EEF9FD;
+}
+.row_1 {
+	background-color: #ffffff;
+}
+
+.row_2 {
+	background-color: #dddddd;
+	text-transform: uppercase;
+}
+
+.row_3 {
+	background-color: #bbbbbb;
+}
+
+.blue {
+	border: 2px solid #5191f0;
+	width: 290px !important;
+}
+
+.alert {
+	color: #ee3333;
+}
+
+#stat ul {
+	float: left;
+	border-bottom: 1px solid #444444;
+	margin: 0px 0px 0px 10px;
+	height: 26px;
+	width: 1000px;
+}
+
+#stat ul li ul {
+	position: absolute;
+	left: 0px;
+	top: 25px;
+	display: block;
+	border: none;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 150px;
+	z-index: 1000;
+}
+
+#stat ul li {
+	display: inline-block;
+	position: relative;
+	list-style-type: none;
+	margin: 0px 5px 0px 0px;
+	border-top: 1px solid #444444;
+	border-left: 1px solid #444444;
+	border-right: 1px solid #444444;
+	border-bottom: 1px solid #444444;
+	padding: 0px 5px 0px 5px;
+	line-height: 25px;
+	background-color: #F4F2F3;
+}
+
+#stat ul li:hover ul li {
+	display: block;
+}
+
+#stat ul li ul li {
+	display: none;
+	list-style-type: none;
+	margin: 0px 5px 0px 0px;
+	padding: 5px;
+	border: none;
+	background-color: #444444;
+	width: 150px;
+}
+
+#stat ul li a, #stat ul li span {
+	color: #444444;
+	text-decoration: none;
+}
+
+#stat ul li:hover, #stat ul li:hover {
+	background-color: #444444;
+}
+
+#stat ul li:hover a, #stat ul li:hover span {
+	color: #ffffff;
+}
+
+.active_tab {
+	background-color: #ffffff !important;
+	border-bottom: 1px solid #ffffff !important;
+}
+
+.active_tab a, .active_tab span {
+	color: #444444 !important;
+}
+
+#stat ul li ul li a {
+	color: #eeeeee !important;
+}
+
+#stat ul li ul li a:hover {
+	color: #ffffff !important;
+}
+
+.active_tab a, .active_tab span {
+}
+
+.large {
+	width: 300px;
+	text-align: left;
+}
+
+.medium {
+	width: 200px;
+	text-align: left;
+}
+
+.small {
+	width: 100px;
+	text-align: center;
+}
+
+input.mini {
+	width: 55px;
+	text-align: center;
+}
+
+.little {
+	font-size: 13px;
+}
+
+.copyright {
+	display: block;
+	margin: 0px auto;
+	width: 1100px;
+}

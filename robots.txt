@@ -1,0 +1,15 @@
+User-agent: *
+
+Disallow: /print
+Disallow: /vip
+
+Host: https://stavropolboard.ru
+Sitemap: https://stavropolboard.ru/upload/sitemap.xml
+
+User-agent: Googlebot-Image
+Allow: /upload/normal
+
+User-agent: YandexImages
+Allow: /upload/normal
+
+User-agent: Mediapartners-Google

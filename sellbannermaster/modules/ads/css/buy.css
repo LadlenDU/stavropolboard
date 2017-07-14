@@ -1,0 +1,328 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #f9f9f9;
+	color: #333;
+	font-family: Arial, Tahoma;
+	height: 100%;
+	width: 100%;
+}
+
+.tooltip span {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	top: -30px;
+	right: -330px;
+	width: 300px;
+	padding: 10px;
+	border: 1px solid #afaaa0;
+	background-color: #fffaf0;
+	border-radius: 8px;
+	box-shadow: 5px 5px 8px #cccccc;
+}
+
+.tooltip {
+	position: relative;
+	border-bottom: 1px dashed #333;
+	cursor: help;
+}
+
+.tooltip:hover span {
+	display: block;
+}
+
+#ads_body {
+	background-color: #f9f9f9;
+	color: #555555;
+	font-family: Arial, Tahoma;
+	height: 100%;
+}
+
+.ads_ad {
+	color: #555555;
+	text-decoration: none;
+	padding-left: 10px;
+	display: block;
+}
+
+.ads_ad:hover {
+	color: #000000;
+}
+
+.ads {
+	clear: left;
+	color: #555555;
+	text-decoration: none;
+	font-size: 12px;
+	display: block !important;
+	margin-top: 5px;
+}
+
+.ads img {
+	vertical-align: middle;
+}
+
+.ads:hover {
+	color: #000000;
+}
+
+#ads_sell {
+	color: #5555ff;
+	border-bottom: 1px dashed #5555ff;
+	text-decoration: none;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+a {
+	color: #005492;
+}
+
+#buy {
+	display: block;
+	width: 100%;
+	height: 680px;
+	margin: 0px auto;
+	background-color: #ffffff;
+	box-shadow:1px 5px 8px #b6b5b5;
+	overflow: auto;
+}
+
+.information {
+	float: left;
+	width: 300px;
+}
+
+.preview {
+	clear: left;
+	float: left;
+	width: 290px;
+	height: 300px;
+	margin: 20px 0px 0px 0px;
+	padding: 5px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.gateways {
+	float: right;
+	width: 500px;
+	height: 600px;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+}
+
+#buy td {
+	padding: 5px 10px 5px 10px;
+	height: 25px;
+	text-align: left;
+}
+
+#buy th {
+	padding: 5px 10px 5px 10px;
+	height: 25px;
+	text-align: center;
+}
+
+#conteiner {
+	padding: 0px 20px 0px 20px;
+}
+
+#top_title {
+	display: block;
+	height: 70px;
+	line-height: 70px;
+	background-color: #005594;
+	color: #d1e9fa;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+#buy input[type=submit] {
+	float: left;
+	margin: 5px 0px 0px 0px;
+	width: 300px;
+	padding: 15px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff;
+	border: none;
+	background-color: #f5aa00;
+	cursor:pointer;
+	border-radius:5px;
+}
+
+#buy input[type=submit]:hover {
+	background-color: #f59000;
+}
+
+#ads_price span {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.row_0 {
+	background-color: #f2f0f0;
+}
+.row_1 {
+	background-color: #ffffff;
+}
+
+.row_2 {
+	background-color: #dddddd;
+	text-transform: uppercase;
+}
+
+.alert {
+	color: #ee3333;
+}
+
+.large {
+	width: 300px;
+	text-align: left;
+}
+
+.small {
+	width: 100px;
+	text-align: center;
+}
+
+input.mini {
+	width: 55px;
+	text-align: center;
+}
+
+
+#zpayment {
+	display: block;
+	margin: 5px auto 0px auto !important;
+	width: 300px;
+	padding: 15px !important;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff !important;
+	border: none;
+	background-color: #f5aa00 !important;
+	cursor:pointer;
+	border-radius:5px;
+}
+
+#zpayment:hover {
+	background-color: #f59000 !important;
+}
+
+#pay {
+	display: block;
+	width: 100%;
+	height: 680px;
+	margin: 0px auto;
+	background-color: #ffffff;
+	box-shadow:1px 5px 8px #b6b5b5;
+}
+
+#pay span {
+	float: left;
+	width: 150px;
+	font-weight: bold;
+}
+
+#pay .info {
+	clear: left;
+	float: left;
+	width: 300px;
+}
+#pay input {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	border: none;
+	background-color: #edecec;
+	margin: 0px 10px 0px 0px;
+	width: 100px;
+}
+#pay select {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	border: none;
+	background-color: #edecec;
+	margin: 0px 10px 0px 0px;
+	width: 200px;
+}
+
+#pay input[type=button] {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff;
+	border: none;
+	background-color: #f5aa00;
+	cursor:pointer;
+	border-radius:5px;
+}
+
+#pay input[type=button]:hover {
+	background:#f59000;
+}
+
+#pay input[type=submit] {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff;
+	border: none;
+	background-color: #f5aa00;
+	cursor:pointer;
+	border-radius:5px;
+	width: 250px;
+}
+
+#pay input[type=submit]:hover {
+	background:#f59000;
+}
+
+#pay #rebuild {
+	float: left;
+	background: none;
+	font-size: 18px;
+	font-weight: normal;
+	color: #005492;
+	border: none;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+	border: 1px solid #005492;
+	cursor: pointer;
+	width: 150px;
+}
+
+#pay #rebuild:hover {
+	color: #2074b2;
+	border: 1px solid #2074b2;
+}
+
+#pay a {
+	display: none;
+}
+#pay table {
+	border: none !important;
+}
+
+#timer {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+#timer label {
+	font-weight: bold;
+	font-size: 30px;
+	color: #ee3333;
+}
+

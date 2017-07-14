@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^sellbannermaster/uploads/.+\.^(gif|png|jpg|ico) - [F,L]
