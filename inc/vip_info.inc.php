@@ -83,7 +83,8 @@ $mrh_pass1 = "Gb1i4I2y6wxyMB3QefVW";
 
 // номер заказа 
 // number of order 
-$inv_id = 0;
+//$inv_id = 0;
+$inv_id = $_GET['id_mess'];
 
 // описание заказа 
 // order description 
@@ -95,7 +96,10 @@ $out_summ = "15.00";
 
 // тип товара 
 // code of goods 
-$shp_item = 1;
+//$shp_item = 1;
+$shp_item = 'vip';
+
+// 1 - top, 2 - VIP
 
 // язык 
 // language 
@@ -200,7 +204,8 @@ $mrh_pass1 = "Gb1i4I2y6wxyMB3QefVW";
 
 // номер заказа 
 // number of order 
-$inv_id = 0;
+//$inv_id = 0;
+$inv_id = $_GET['id_mess'];
 
 // описание заказа 
 // order description 
@@ -212,7 +217,8 @@ $out_summ = "5.00";
 
 // тип товара 
 // code of goods 
-$shp_item = 2;
+//$shp_item = 2;
+$shp_item = 'sel';
 
 // язык 
 // language 
